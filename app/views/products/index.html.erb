@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<p class="navbar-text pull-right">
+<% if customer_signed_in? %>
+  Logged in as <strong><%= current_customer.email %></strong>.
+  <%= link_to 'Edit profile', edit_customer_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_customer_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_customer_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_customer_session_path, :class => 'navbar-link'  %>
+<% end %>
+
 <h1>Listing Products</h1>
 
 <table>
@@ -25,8 +35,11 @@
         <td><%= product.size %></td>
         <td><%= product.remarks %></td>
         <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%# link_to 'Edit', edit_product_path(product) %></td>
+        <td><%# link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Add To Cart', add_to_cart_path(product), method: :post %></td>
+
+        <%= JSON.parse(cookies["cart"]) %>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +47,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%# link_to 'New Product', new_product_path %>
