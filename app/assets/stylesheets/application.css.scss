@@ -14,6 +14,8 @@
  *= require_self
  */
 
+@import "materialize";
+
 @font-face {
 	font-family: 'ChampagneLimousines';
 	src: url('/assets/ChampagneLimousines.woff') format('woff');
@@ -33,13 +35,14 @@
 	/* margin-right: 5vw; */
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 1cm;
 	/* z-index: 1; */
 	position: relative;
 }
 .headerlinks {
 	font-family: 'ChampagneLimousines' !important;
 	font-style: normal;
-	font-style: normal;
+	/*color: #ffffff;*/
 	font-size: 1.4em;
 	margin-top: 13.5vh;
 	z-index: 6;
@@ -51,17 +54,12 @@
 
 @media (max-width:980px) {
 		.headerimg {
-		width: 90vw;
-		height: 12vh;
-	}
-	.headerlinks {
-
-	font-size: 1em;
-	
-	margin-top: 4.7vh;
-
-
+			width: 90vw;
+			height: 20vh;
+		}
+		.headerlinks {
+			font-size: 1em;
+			margin-top: 9vh;
+		}
 }
-}
-
 
