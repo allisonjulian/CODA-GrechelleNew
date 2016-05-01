@@ -14,7 +14,10 @@
  *= require_self
  */
 
-@import "materialize";
+@import "materialize/components/color";
+/*$primary-color: color("cyan", "lighten-4") !default;
+*/@import "materialize";
+
 
 @font-face {
 	font-family: 'ChampagneLimousines';
@@ -61,5 +64,12 @@
 			font-size: 1em;
 			margin-top: 9vh;
 		}
+}
+
+.forms {
+/*	position: center;
+*/	padding-right: 500px;
+	padding-left: 500px;
+	padding-bottom: 50px;
 }
 
