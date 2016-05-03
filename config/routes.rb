@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
-  root to: "products#index"
+  root to: "pages#index"
   post "add/:id", to: "cart#add", as: :add_to_cart
   devise_for :customers
   devise_for :users

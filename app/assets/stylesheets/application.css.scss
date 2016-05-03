@@ -15,8 +15,8 @@
  */
 
 @import "materialize/components/color";
-/*$primary-color: color("cyan", "lighten-4") !default;
-*/@import "materialize";
+$primary-color: color("red", "lighten-4") !default;
+@import "materialize";
 
 
 @font-face {
@@ -51,6 +51,12 @@
 	z-index: 6;
 
 }
+
+#products {
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+
 .nav-row{
 	width:90vw;
 }
@@ -64,12 +70,10 @@
 			font-size: 1em;
 			margin-top: 9vh;
 		}
+		#products {
+			padding-left: 5vw;
+			padding-right: 5vw;
+		}
 }
 
-.forms {
-/*	position: center;
-*/	padding-right: 500px;
-	padding-left: 500px;
-	padding-bottom: 50px;
-}
 
